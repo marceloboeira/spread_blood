@@ -1,16 +1,15 @@
 <div class="row item-not">
   <div class="col-xs-3">
     <%= link_to gravatar_for(donation.user, class: "img-circle col-xs-12") %>
+    <%= link_to(fa("trash"), destroy_donation_path(donation)) if current_user == donation.user %>
   </div>
   <div class="col-xs-9">
     <h4>
-    <small> <%= datetime_ago(donation.donated_at) %></small><br />
-    <%= link_to donation.user.at_username, donation.user %>
-    doou <%= "#{donation.amount} ml" %> em <span class="place"><%= donation.location %></span>
-  </h4>
-  <p>
-    <%= donation.comment %>
-  </p>
+      <small> <%= datetime_ago(donation.donated_at) %></small><br />
+      <%= link_to donation.user.at_username, donation.user %>
+      doou <%= "#{donation.amount} ml" %> em <span class="place"><%= donation.location %></span>
+    </h4>
+    <p><%= donation.comment.truncate(100) %></p>
   </div>
-  <i class="fa fa-tint"></i>
+  <%= fa "tint" %>
 </div>
