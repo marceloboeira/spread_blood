@@ -73,3 +73,13 @@ $(function() {
   // Booting up core
   SpreadBlood.init();
 });
+
+$('html').append('<i class="fa fa-spinner fa-pulse loading"></i> <i class="fa fa-tint loading-tint-icon"></i>');
+
+$(window).load(function()
+{
+  setTimeout(function(){
+   $('body').css({'display':'block'});
+   $('.loading, .loading-tint-icon').remove();
+  },150);
+});
