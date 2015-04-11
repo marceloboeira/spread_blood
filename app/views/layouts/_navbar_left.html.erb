@@ -23,6 +23,6 @@
 		<hr />
 		<div class="row tint">
 			<% current_user.drop_amount.times do %>
-				<%= fa "tint" %>
+				<%= fa "tint", title: current_user.drop_base_calc + ' ml' %>
 			<% end %>
 		</div>
