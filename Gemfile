@@ -13,9 +13,7 @@ gem "acts_as_follower"
 gem "cancancan", "~> 1.10"
 gem "therubyracer"
 gem "devise"
-gem "friendly_id"
 gem "enumerate_it"
-gem "paranoia"
 
 group :development do
   gem "spring"
