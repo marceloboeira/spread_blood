@@ -1,28 +1,26 @@
 <div class="row image-sidebar">
-					<%= link_to gravatar_for(current_user, class: "img-rounded col-xs-12") %>
-				<br /><span class="badge label-blood"><%= current_user.blood_type_humanize %></span>
-		</div>
-		<div class="row">
-			<h4>
-			<%= current_user.full_name %>
-			<br />
-			<small>
-				<%= link_to current_user.at_username, current_user.at_username %>
-
-			</small>
-			</h4>
-		</div>
-		<div class="row">
-			<div class="progress">
-			  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:
-			    <%= "#{current_user.drop_missing_percentage}%" %>;">
-			    <%= "#{current_user.drop_missing_amount} ml" %>
-			  </div>
-			</div>
-		</div>
-		<hr />
-		<div class="row tint">
-			<% current_user.drop_amount.times do %>
-				<%= fa "tint" %>
-			<% end %>
-		</div>
+  <%= link_to gravatar_for(current_user, class: "img-rounded col-xs-12") %>
+    <br /><span class="badge label-blood"><%= current_user.blood_type_humanize %></span>
+  </div>
+<div class="row">
+  <h4>
+  <center><%= current_user.full_name %></center>
+  <br />
+  <small>
+    <center><%= link_to current_user.at_username, current_user.at_username %></center>
+  </small>
+  </h4>
+</div>
+<div class="row">
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width: <%= "#{current_user.drop_missing_percentage}%" %>;">
+      <b><%= "#{current_user.drop_missing_amount} ml" %></b>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row tint">
+  <% current_user.drop_amount.times do %>
+    <%= fa "tint" %>
+  <% end %>
+</div>
