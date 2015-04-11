@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
          :trackable, :validatable, :confirmable, authentication_keys: [:login]
   acts_as_birthday :birthday
+  has_many :donations
   has_enumeration_for :gender, with: Gender, create_helpers: true
   has_enumeration_for :role, with: UserRole, create_helpers: true, create_scopes: true
   has_enumeration_for :blood_type, with: BloodType, create_helpers: true
@@ -31,7 +32,30 @@ class User < ActiveRecord::Base
     "@#{username}"
   end
 
+  def donated_amount
+    #TODO: SCOPE ?
+    donations.sum :amount
+  end
+
+  def drop_amount
+    #TODO: BAD HORSIE HORSIE
+    donated_amount / drop_base_calc
+  end
+
+  def drop_missing_amount
+    donated_amount % drop_base_calc
+  end
+
+  def drop_missing_percentage
+    drop_missing_amount * 100 / drop_base_calc
+  end
+
+
   private
+
+  def drop_base_calc
+    male? ? 600 : 500
+  end
 
   def default_values
     self.gender ||= Gender::OTHER
