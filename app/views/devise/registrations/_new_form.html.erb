@@ -7,10 +7,17 @@
   </div>
 
   <div class="field">
+    <%= f.label "Usuário" %><br />
+    <%= f.email_field :username, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Tipo sanguíneo" %>
+    <%= f.select :blood_type, collection: BloodType.to_a %>
+  </div>
+
+  <div class="field">
     <%= f.label "Digite sua senha" %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
     <%= f.password_field :password, autocomplete: "off" , class: "form-control" %>
   </div>
 
