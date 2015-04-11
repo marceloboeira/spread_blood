@@ -1,0 +1,15 @@
+<div class="row item-not">
+				    <div class="col-xs-3">
+				    	<%= link_to gravatar_for(donation.user, class: "img-circle col-xs-12") %>
+				    </div>
+				    <div class="col-xs-9">
+				    	<h4>
+				    		<small> <%= datetime_ago(donation.donate_at) %></small><br />
+				    		<%= link_to donation.user.at_username, donation.user %> doou <%= "#{donation.amount} ml" %> em <span class="place"><%= donation.location %></span>
+				    	</h4>
+				    	<p>
+				    		<%= donation.comment %>
+				    	</p>
+				    </div>
+				<i class="fa fa-tint"></i>
+			</div>
