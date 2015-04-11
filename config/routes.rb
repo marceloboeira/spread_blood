@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     }
   get '/@:username', to: 'account#show', as: 'profile'
   get '/timeline', to: 'timeline#index'
-  resource :donations
+
+  resources :donations
+  get '/donations/:id/destroy', to: 'donations#destroy', as: 'destroy_donation'
 end
