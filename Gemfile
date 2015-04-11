@@ -16,7 +16,6 @@ gem "devise"
 gem "friendly_id"
 gem "enumerate_it"
 gem "paranoia"
-gem "pg"
 
 group :development do
   gem "spring"
