@@ -17,3 +17,4 @@ config/secrets.yml
 /vendor/bundle
 .rvmrc
 .powenv
+.env
