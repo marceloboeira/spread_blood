@@ -1,0 +1,74 @@
+"pt-BR":
+  enumerations:
+    gender:
+      male: "Masculino"
+      female: "Feminino"
+      other: "Outro"
+    blood_type:
+      a_positive: "A+"
+      a_negative: "A-"
+      ab_positive: "AB+"
+      ab_negative: "AB-"
+      b_positive: "B+"
+      b_negative: "B-"
+      o_positive: "O+"
+      o_negative: "O-"
+
+  devise:
+    failure:
+      unauthenticated: "Você precisa logar antes de continuar."
+      unconfirmed: "Você precisa confirmar a sua conta antes de continuar."
+      locked: "Sua conta está bloqueada."
+      invalid: "Usuário ou senha inválidos."
+      invalid_token: "Token de autenticação inválido."
+      timeout: "Sua sessão expirou por inatividade."
+      inactive: "Sua conta ainda não foi ativada."
+      user:
+        not_found_in_database: "Conta não encontrada."
+    sessions:
+      signed_in: "Autenticado com sucesso."
+      signed_out: "Sessão encerrada com sucesso."
+    passwords:
+      send_instructions: &send_instructions "Você receberá um e-mail com as instruções de como trocar a sua senha em alguns minutos."
+      updated: "Sua senha foi alterada com sucesso. Agora você está autenticado."
+      send_paranoid_instructions: *send_instructions
+      leave_blank: "Deixe em branco se você não deseja alterar"
+      current_confirmation: "Precisamos da sua senha atual para confirmar as mudanças"
+    confirmations:
+      waiting: "Atualmente aguardando confirmação para: %{email}"
+      send_instructions: "Você receberá um e-mail com as instruções de como confirmar a sua conta em alguns minutos."
+      confirmed: "Sua conta foi confirmada com sucesso. Agora você está autenticado."
+    registrations:
+      signed_up: "Você se cadastrou com sucesso. Se não autorizado, a confirmação foi enviada por email."
+      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      updated: "Sua conta foi atualizada com sucesso."
+      destroyed: "Sua conta foi cancelada com sucesso."
+    unlocks:
+      send_instructions: "Você receberá um e-mail com as instruções de como desbloquear a sua conta em alguns minutos."
+      unlocked: "Sua conta foi desbloqueada com sucesso. Agora você está autenticado."
+    omniauth_callbacks:
+      success: "Successfully authorized from %{kind} account."
+      failure: "Could not authorize you from %{kind} because '%{reason}'."
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções de confirmação"
+      reset_password_instructions:
+        subject: "Instruções para troca de senha"
+        greeting: "Olá"
+        body_message: "Foi solicitado um link para troca de senha, se você deseja realmente alterar a senha, clique no link abaixo:"
+        change_link: "Redefinir minha senha"
+        thanks: "Obrigado"
+        team: "Equipe"
+      unlock_instructions:
+        subject: "Instruções para desbloqueio de conta"
+
+  çerrors:
+    messages:
+      not_found: "não encontrado"
+      already_confirmed: "já foi confirmado"
+      not_locked: "não estava bloqueado"
+      not_saved:
+        one: "1 erro impediu que %{model} fosse gravado:"
+        other: "%{count} erros impediram que %{model} fosse gravado:"
