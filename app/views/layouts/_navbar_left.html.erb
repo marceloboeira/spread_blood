@@ -4,9 +4,12 @@
 		</div>
 		<div class="row">
 			<h4>
-			Marvin Medeiros
+			<%= current_user.full_name %>
 			<br />
-			<small> @marvin </small>
+			<small>
+				<%= link_to current_user.at_username, current_user.at_username %>
+
+			</small>
 			</h4>
 		</div>
 		<div class="row">
