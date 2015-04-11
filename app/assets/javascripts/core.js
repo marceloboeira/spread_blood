@@ -5,7 +5,8 @@
 //= require medium-editor
 //= require_self
 
-$(function(){
+$(function() {
+
   /**
    * SpreadBlood Front-end Core
    * @type {Object}
