@@ -11,27 +11,15 @@
 		</div>
 		<div class="row">
 			<div class="progress">
-			  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="400" aria-valuemin="0" aria-valuemax="500" style="width: 60%;">
-			    400 ml
+			  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:
+			    <%= "#{current_user.drop_missing_percentage}%" %>;">
+			    <%= "#{current_user.drop_missing_amount} ml" %>
 			  </div>
 			</div>
 		</div>
 		<hr />
 		<div class="row tint">
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
-			<i class="fa fa-tint"></i>
+			<% current_user.drop_amount.times do %>
+				<%= fa "tint" %>
+			<% end %>
 		</div>
