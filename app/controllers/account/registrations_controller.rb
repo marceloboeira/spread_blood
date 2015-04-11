@@ -18,4 +18,3 @@ class Account::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :current_password, :gender, :blood_type) }
   end
 end
-registrations_controller.rb
