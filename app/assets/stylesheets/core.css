@@ -6,3 +6,51 @@
  *= require medium-editor/themes/default
  *= require_self
  */
+body{
+	padding-bottom:100px;
+}
+.logo{
+	margin:0px;
+	width:35px;
+	margin-top:-5px;
+	display:inline-block;
+}
+.navbar-brand{
+	width:250px;
+}
+.img-logo-dashboard{
+	width:30px;
+	margin-bottom:-10px;
+}
+.logo-footer{
+	margin-top:10px;
+	opacity:0.2;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	cursor:pointer;
+}
+.logo-footer:hover{
+	opacity:1;
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+}
+.label-blood{
+	font-size:20px;
+	background:#b73c3c;
+}
+
+.label-blood i{
+	font-size:10px;
+	position:relative;
+	right:-2px;
+	top:-3px;
+}
+.image-sidebar span.badge{
+	float:right;
+	margin-top:-20px;
+	margin-right:0px;
+	z-index:100 !important;
+	font-size:20px;
+	background:#b73c3c;
+	position:relative;
+}
