@@ -1,4 +1,11 @@
 <%= form_for @donation do |f| %>
+  <% if @donation.errors.any? %>
+  <ul>
+    <% @donation.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
 
   <div class="field">
     <%= f.label "Lugar" %><br />
