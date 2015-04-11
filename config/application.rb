@@ -9,7 +9,7 @@ module SpreadBlood
     config.autoload_paths << "#{Rails.root}/app/models/enumerations/"
     config.autoload_paths << "#{Rails.root}/lib/validators/"
     config.time_zone = "Brasilia"
-    config.i18n.default_locale = config.i18n.locale = ENV["SB_LOCALE"] || :"pt-BR"
+    config.i18n.default_locale = config.i18n.locale = ENV["SB_LOCALE"] || :"en"
     config.assets.paths << Rails.root.join("app", "assets")
     config.generators do |g|
       g.test_framework :rspec,

@@ -17,5 +17,5 @@ Rails.application.routes.draw do
       edit: 'settings'
     }
   get '/@:username', to: 'account#show', as: 'profile'
-
+  get '/timeline', to: 'timeline#index'
 end
