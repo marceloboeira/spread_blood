@@ -2,11 +2,11 @@ class DonationsController < ApplicationController
   load_and_authorize_resource
 
   def new
-    @donation = Donations.new
+    @donation = Donation.new
   end
 
   def create
-    @donation = Donations.new(donation_params)
+    @donation = Donation.new(donation_params)
     @donation.user = current_user
     if @donation.save
       redirect_to(timeline_path, notice: "Doação criada com sucesso!")
