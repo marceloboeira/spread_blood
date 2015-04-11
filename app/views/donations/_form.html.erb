@@ -1,0 +1,22 @@
+<%= form_for @donation do |f| %>
+
+  <div class="field">
+    <%= f.label "Lugar" %><br />
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Quantidade" %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label "Comentário" %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Cadastrar", class: "btn btn-danger" %>
+  </div>
+<% end %>
+
