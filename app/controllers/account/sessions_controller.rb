@@ -11,7 +11,7 @@ class Account::SessionsController < Devise::SessionsController
     if request.referer == sign_in_url
       super
     else
-      dashboard_path
+      timeline_path
     end
   end
 
