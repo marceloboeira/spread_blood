@@ -12,8 +12,6 @@ $(function() {
    * @type {Object}
    */
   var SpreadBlood = {
-    version: $("#spreadblood-version").val(),
-    locale: $("#spreadblood-locale").val(),
     CSRF: $('meta[name=csrf-token]').attr('content'),
 
     /**
