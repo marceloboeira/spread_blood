@@ -1,11 +1,3 @@
-/*
- *= require bootstrap
- *= require animate.css
- *= require font-awesome
- *= require medium-editor
- *= require medium-editor/themes/default
- *= require_self
- */
 body{
 	padding-bottom:100px;
 }
@@ -53,4 +45,74 @@ body{
 	font-size:20px;
 	background:#b73c3c;
 	position:relative;
+}
+.loading{
+	position:absolute;
+	top:50%;
+	left:50%;
+	font-size:100px;
+	margin-top:-50px;
+	margin-left:-50px;
+	color:#b73c3c;
+	opacity:0.4;
+}
+.tint .fa-tint, .modal .fa-tint{
+	color: #b73c3c;
+	font-size:25px;
+	margin-right:2px;
+}
+.alert{
+	padding-top: 0px;
+	padding-bottom: 20px;
+}
+.loading-tint-icon{
+	position:absolute;
+	color:#b73c3c;
+	opacity:0.2;
+	top:50%;
+	left:50%;
+	font-size: 50px;
+	margin-left:-15px;
+	margin-top:-20px;
+}
+.new-user{
+	width:40px;
+}
+.label-new-user{
+	position: relative;
+	top:0px;
+	left:0px;
+	z-index:100;
+	background: #b73c3c;
+	font-size:12px;
+	width:100%;
+}
+.row-new-users .media{
+	cursor:pointer;
+}
+.row-new-users .media:hover{
+	background:rgb(248,248,248);
+}
+
+.item-not{
+	border-bottom:1px solid rgb(230,230,230);
+	margin-bottom:40px;
+}
+.item-not .fa-tint{
+	position:relative;
+	bottom:-35px;
+	left:0px;
+	font-size:30px;
+	color:rgb(230,230,230);
+	border:10px solid #fff;
+	background:#fff;
+}
+.item-not span.place{
+	color:#b73c3c;
+}
+.submit_register{
+	padding-top:20px;
+}
+.tab-pane{
+	padding-top:10px;
 }
