@@ -26,7 +26,6 @@ group :development do
 end
 
 group :test do
-  gem "sqlite3"
   gem "faker"
   gem "capybara"
   gem "poltergeist"
@@ -40,6 +39,7 @@ end
 
 group :development, :test do
   gem "dotenv-rails"
+  gem "sqlite3"
 end
 
 group :production do
