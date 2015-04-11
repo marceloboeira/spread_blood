@@ -7,6 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- Header -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      	<span><img src="assets/img/drop.png" class="logo"/> SPREAD <b>BLOOD</b></span>
+      	</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" role="search">
+	      <div class="input-group">
+	      <input type="text" class="form-control" placeholder="Pesquise por doadores">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+	      </span>
+	    </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">FAQ</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://www.gravatar.com/avatar/bb77034c265ef86a4637e630f2e82afc?s=50" class="img-circle img-logo-dashboard"/> <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#"><i class="fa fa-user"></i> Editar Perfil</a></li>
+            <li><a href="#"><i class="fa fa-key"></i> 	Alterar Senha</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i> Sair</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- Header -->
 
 <%= yield %>
 
