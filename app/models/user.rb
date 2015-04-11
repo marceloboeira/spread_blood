@@ -23,6 +23,14 @@ class User < ActiveRecord::Base
     birthday_age
   end
 
+  def full_name
+    self.name || self.username.titleize
+  end
+
+  def at_username
+    "#{username}"
+  end
+
   private
 
   def default_values
