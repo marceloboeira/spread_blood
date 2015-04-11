@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
   end
 
   def at_username
-    "#{username}"
+    "@#{username}"
   end
 
   private
