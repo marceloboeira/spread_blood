@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411175700) do
+ActiveRecord::Schema.define(version: 20150411181320) do
+
+  create_table "donations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "location",             null: false
+    t.integer  "amount",     limit: 2
+    t.text     "comment"
+    t.datetime "donated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

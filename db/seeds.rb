@@ -58,3 +58,11 @@ andre = User.create(username: 'andre',
                       confirmed_at: DateTime.now,
                       blood_type: BloodType::A_POSITIVE,
                       role: UserRole::REGULAR)
+
+Donation.create(user: marcelo, location: "Banco de Sangue do Hospital de Clínicas", amount: 650, comment: "Awesome", donated_at: 2.years.ago)
+Donation.create(user: marcelo, location: "Banco de Sangue do Hospital de Clínicas", amount: 350, comment: "Awesome", donated_at: 1.month.ago)
+Donation.create(user: marvin, location: "Banco de Sangue do Hospital de Clínicas", amount: 350, comment: "Awesome", donated_at: 1.day.ago)
+Donation.create(user: matheus, location: "Banco de Sangue do Hospital de Clínicas", amount: 538, comment: "Awesome", donated_at: 1.hour.ago)
+Donation.create(user: andre, location: "Banco de Sangue do Hospital de Clínicas", amount: 500, comment: "Awesome", donated_at: 1.week.ago)
+
+
