@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'core' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="display:none">
   <nav class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
@@ -36,7 +36,7 @@
           <li><a href="#">FAQ</a></li>
           <% if signed_in? %>
             <li class="dropdown">
-              <%= link_to gravatar_for(current_user, class: "img-circle img-logo-dashboard", "data-placement": "left"), "#", class: "dropdown-toggle", "data-toggle": "dropdown"  %>
+              <%= link_to gravatar_for(current_user, class: "img-circle img-logo-dashboard", "data-placement": "right") + fa('caret-down'), "#", class: "dropdown-toggle", "data-toggle": "dropdown"  %>
               <ul class="dropdown-menu" role="menu">
                 <li><%= link_to fa("edit", text: "Editar perfil"), edit_registration_path(:user)  %></li>
                 <li class="divider"></li>
