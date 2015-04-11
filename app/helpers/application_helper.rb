@@ -3,7 +3,7 @@ module ApplicationHelper
   include FontAwesomeHelper
 
   def datetime_ago date
-    content_tag :date, nil, title: date.to_s(:long), "data-source": date.to_s(:rfc822)
+    content_tag :date, nil, title: date.to_s(:long), "data-source": date.to_time.to_i
   end
 
   def resource_name

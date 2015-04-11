@@ -14,7 +14,6 @@ $(function() {
   var SpreadBlood = {
     version: $("#spreadblood-version").val(),
     locale: $("#spreadblood-locale").val(),
-    dateFormat: "ddd, DD MMM YYYY HH:mm:ss ZZ", // RFC822 Pattern
     CSRF: $('meta[name=csrf-token]').attr('content'),
 
     /**
@@ -25,7 +24,6 @@ $(function() {
       this._momentInit();
       this._mediumInit();
       this._tooltipInit();
-      this._bootboxInit();
     },
 
     /**
@@ -44,7 +42,7 @@ $(function() {
      */
     _momentUpdate: function(){
       $("date, time").each(function(i, e) {
-        var d = moment.utc($(e).data("source"), SpreadBlood.dateFormat);
+        var d = moment.unix($(e).data("source"));
         $(e).html(d.fromNow());
       });
     },
@@ -76,10 +74,9 @@ $(function() {
 
 $('html').append('<i class="fa fa-spinner fa-pulse loading"></i> <i class="fa fa-tint loading-tint-icon"></i>');
 
-$(window).load(function()
-{
+$(window).load(function() {
   setTimeout(function(){
    $('body').css({'display':'block'});
    $('.loading, .loading-tint-icon').remove();
-  },150);
+  }, 150);
 });
