@@ -54,7 +54,11 @@
       <%= render '/layouts/navbar_left' %>
     </div>
     <% end %>
+     <% if signed_in? %>
     <div class="col-xs-12 col-sm-7 col-md-10">
+    <% else %>
+    <div class="col-xs-12">
+    <% end %>
       <%= yield %>
     </div>
   </div>
