@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  #include PublicActivity::StoreController
+  before_filter :authenticate_user!
   protect_from_forgery with: :exception
 
   rescue_from CanCan::AccessDenied do |exception|
