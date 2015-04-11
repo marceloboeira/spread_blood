@@ -1,1 +1,112 @@
-<h1> TimeLine </h1>
+
+
+
+		<div class="col-xs-12 col-sm-7 col-md-8">
+			<div class="row jumbotron">
+				<h2>
+					Você doou sangue recentemente ?
+					<br />
+					<small>Junte-se a comunidade</small>
+				</h2>
+				<button class="btn btn-danger btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+				<i class="fa fa-tint"></i> Informar Doação
+				</button>
+			</div>
+			<!-- Notifications -->
+			<div class="row item-not">
+				    <div class="col-xs-3">
+				    	<img src="http://www.gravatar.com/avatar/bb77034c265ef86a4637e630f2e82afc" class="img-circle col-xs-12" />
+				    </div>
+				    <div class="col-xs-9">
+				    	<h4>
+				    		<small> à 2 horas atrás</small><br />
+				    		Marvin Medeiros doou sangue em <span class="place">Banco de Sangue</span>
+				    	</h4>
+				    	<p>
+				    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices quis lorem quis facilisis. In maximus massa varius fermentum feugiat. Nullam ornare a nibh eu iaculis. Ut egestas quam id orci scelerisque molestie. Etiam eget elit luctus, consectetur arcu sit amet, convallis felis. Sed a facilisis massa. Proin vitae nisl vel lectus condimentum interdum non sed nibh.
+				    	</p>
+				    </div>
+				<i class="fa fa-tint"></i>
+			</div>
+
+			<div class="row item-not">
+				    <div class="col-xs-3">
+				    	<img src="http://www.gravatar.com/avatar/bb77034c265ef86a4637e630f2e82afc" class="img-circle col-xs-12" />
+				    </div>
+				    <div class="col-xs-9">
+				    	<h4>
+				    		<small> à 2 horas atrás</small><br />
+				    		Marvin Medeiros doou sangue em <span class="place">Banco de Sangue</span>
+				    	</h4>
+				    	<p>
+				    		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices quis lorem quis facilisis. In maximus massa varius fermentum feugiat. Nullam ornare a nibh eu iaculis. Ut egestas quam id orci scelerisque molestie. Etiam eget elit luctus, consectetur arcu sit amet, convallis felis. Sed a facilisis massa. Proin vitae nisl vel lectus condimentum interdum non sed nibh.
+				    	</p>
+				    </div>
+				<i class="fa fa-tint"></i>
+			</div>
+			<!-- Notifications -->
+		</div>
+	<div class="hidden-xs col-sm-5 col-md-4">
+		<div class="col-xs-12 alert alert-warning hidden-sm">
+			<h3><i class="fa fa-lightbulb-o"></i> Você sabia ?</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam elementum elementum lectus, eu bibendum neque laoreet sed. Donec ullamcorper nec mauris ut luctus. Sed vitae tristique mi. </p>
+		</div>
+
+		<div class="col-xs-12 row-new-users">
+			<div class="media col-sm-4 col-md-12"><div class="media-left"><a href="#">
+			      <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/bb77034c265ef86a4637e630f2e82afc?s=40">
+			      <span class="badge label-new-user">A+</span></a></div><div class="media-body">
+			      <h4 class="media-heading">Marvin Medeiros</h4>Acaba de se registrar</div>
+			</div>
+			<div class="media col-sm-4 col-md-12 "><div class="media-left"> <a href="#">
+			      <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/fb84d2df934999fc747feb4d7c758e2c?s=40">
+			      <span class="badge label-new-user">O-</span></a></div><div class="media-body">
+			    <h4 class="media-heading">Marcelo Boeira</h4>Acaba de se registrar</div>
+			</div>
+			<div class="media col-sm-4 col-md-12 "><div class="media-left"> <a href="#">
+			      <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/fb84d2df934999fc747feb4d7c758e2c?s=40">
+			      <span class="badge label-new-user">O-</span></a></div><div class="media-body">
+			    <h4 class="media-heading">Marcelo Boeira</h4>Acaba de se registrar</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    	<form method="post" action="/">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-tint"></i> Informar doação</h4>
+	      </div>
+	      <div class="modal-body row">
+	      	<div class="col-xs-6">
+			    <label for="Lugar">Lugar</label>
+			    <input type="text" class="form-control" id="lugar" placeholder="Aonde você fez sua doação?">
+			</div>
+			<div class="col-xs-6">
+			    <label for="quantidade">Quantidade</label>
+			    <input type="number" class="form-control" id="quantidade" value="500" min="300" max="500">
+			 </div>
+			 <div class="col-xs-12">
+			 <br />
+			    <label for="quantidade">Comentário</label>
+			    <textarea class="form-control" id="comentario" placeholder="Descreva sua experiência"></textarea>
+			 </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	        <input type="submit" class="btn btn-danger" value="Concluir"></input>
+	      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

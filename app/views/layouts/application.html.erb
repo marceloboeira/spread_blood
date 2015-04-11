@@ -48,7 +48,20 @@
       </div>
     </div>
   </nav>
-  <%= yield %>
+  <div class="container">
+  <% if signed_in? %>
+    <div class="hidden-xs col-sm-3 col-md-2">
+      <%= render '/layouts/navbar_left' %>
+    </div>
+    <% end %>
+     <% if signed_in? %>
+    <div class="col-xs-12 col-sm-7 col-md-10">
+    <% else %>
+    <div class="col-xs-12">
+    <% end %>
+      <%= yield %>
+    </div>
+  </div>
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <%= image_tag "images/drop.png", class: "logo logo-footer" %>
