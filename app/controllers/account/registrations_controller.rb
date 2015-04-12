@@ -15,6 +15,6 @@ class Account::RegistrationsController < Devise::RegistrationsController
 
   def devise_filter
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :current_password, :gender, :blood_type, :needs_donation) }
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :username, :email, :password, :password_confirmation, :current_password, :gender, :blood_type, :needs_donation, :about) }
   end
 end
