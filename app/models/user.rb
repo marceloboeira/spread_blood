@@ -27,7 +27,8 @@ class User < ActiveRecord::Base
   end
 
   def full_name
-    if self.name.empty?
+
+    if self.name.nil? || self.name.empty?
       return self.username.titleize
     end
 
