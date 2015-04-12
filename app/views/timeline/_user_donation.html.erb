@@ -7,7 +7,7 @@
     <h4>
       <small> <%= datetime_ago(donation.donated_at) %></small><br />
       <%= link_to donation.user.at_username, donation.user %>
-      doou <%= "#{donation.amount} ml" %> em <span class="place"><%= donation.location %></span>
+      doou <b><%= "#{donation.amount} ml" %></b> em <span class="place"><%= donation.location %></span>
     </h4>
     <p><%= donation.comment.truncate(100) %></p>
   </div>
