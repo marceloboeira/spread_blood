@@ -26,6 +26,7 @@
           </a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if signed_in? %>
         <form class="navbar-form navbar-left" role="search">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Pesquise por doadores">
@@ -34,8 +35,8 @@
           </span>
         </div>
         </form>
+        <% end %>
         <ul class="nav navbar-nav navbar-right">
-
           <li><%= link_to fa("tasks", text: "Ranking"), ranking_path %></li>
           <% if signed_in? %>
             <li class="dropdown">
