@@ -1,8 +1,6 @@
 class AccountController < ApplicationController
 
-  def index
-  end
-
-  def profile
+  def show
+    @user = User.find_by_username(params[:username])
   end
 end

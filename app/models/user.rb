@@ -54,7 +54,6 @@ class User < ActiveRecord::Base
     male? ? 600 : 500
   end
 
-
   private
 
   def default_values

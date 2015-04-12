@@ -2,12 +2,10 @@ class DonationsController < ApplicationController
   load_and_authorize_resource
 
   def new
-    p "HACK_IN_POA1"
     @donation = Donation.new
   end
 
   def create
-    p "HACK_IN_POA"
     @donation = Donation.new(donation_params)
     @donation.user = current_user
     if @donation.save
