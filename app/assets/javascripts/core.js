@@ -63,24 +63,21 @@ $(function() {
 $('html').append('<i class="fa fa-spinner fa-pulse loading"></i> <i class="fa fa-tint loading-tint-icon"></i>');
 
 $(window).load(function() {
-
   $('.quantity-view h4').text($('[type="range"]').val() + ' ml');
-
-  setTimeout(function(){
+  setTimeout(function() {
    $('body').css({'display':'block'});
    $('.loading, .loading-tint-icon').remove();
   }, 150);
-
   setTimeout(function(){
-    $('#flash-messages .panel')
-              .removeClass('animated bounceInUp')
-              .addClass('animated bounceOutDown');
-        setTimeout(function(){ $('#flash-messages').remove(); },1000)
-  },5000);
-
-$( ".datepicker" ).datepicker({
-  dateFormat: "dd/mm/yy"
-});
+    $('#flash-messages .panel').removeClass('animated bounceInUp').addClass('animated bounceOutDown');
+        setTimeout(function(){
+          $('#flash-messages').remove();
+        }, 1000)
+  }, 5000);
+  $( ".datepicker" ).datepicker({
+    dateFormat: "dd/mm/yy",
+    maxDate: new Date()
+  });
 });
 
 $(document).on('change','[type="range"]', function(){
