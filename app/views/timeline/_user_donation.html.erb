@@ -2,6 +2,7 @@
   <div class="col-xs-12 col-sm-3">
     <%= link_to gravatar_for(donation.user, class: "img-circle col-xs-12") %>
     <%= link_to(fa("trash"), destroy_donation_path(donation)) if current_user == donation.user %>
+    <%= link_to(fa("twitter"), "https://twitter.com/intent/tweet?text=Eu doei #{donation.amount} ml de sangue&hashtags=spreadblood", target: "_blank") if current_user == donation.user %>
   </div>
   <div class="col-xs-12 col-sm-9">
     <h4>
