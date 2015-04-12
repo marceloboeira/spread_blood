@@ -26,7 +26,6 @@ group :test do
   gem "capybara"
   gem "poltergeist"
   gem "guard-rspec"
-  gem "codeclimate-test-reporter", require: false
   gem "shoulda-matchers"
   gem "factory_girl_rails"
   gem "rspec-rails"
