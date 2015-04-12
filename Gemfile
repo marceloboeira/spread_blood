@@ -49,4 +49,5 @@ source "https://rails-assets.org" do
   gem "rails-assets-font-awesome"
   gem "rails-assets-animate.css"
   gem "rails-assets-moment"
+  gem 'rails-assets-jquery-ui'
 end
