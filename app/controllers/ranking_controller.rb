@@ -1,0 +1,2 @@
+class RankingController < ApplicationController
+end
