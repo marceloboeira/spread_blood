@@ -1,12 +1,17 @@
-
-development: &default
+development:
   adapter: postgresql
-  url: <%= ENV['SB_DATABASE_URL'] %>
+  host: localhost
+  database: spreadblood_dev
+  user: spreadblood_dev
+  password: spreadblood_dev
+  pool: 30
 
 test:
-  <<: *default
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
 
 production:
-  <<: *default
+  adapter: postgresql
+  url: <%= ENV['SB_DATABASE_URL'] %>
   pool: 30
