@@ -77,4 +77,10 @@ $(window).load(function() {
    $('body').css({'display':'block'});
    $('.loading, .loading-tint-icon').remove();
   }, 150);
+  setTimeout(function(){
+    $('#flash-messages .alert')
+              .removeClass('animated bounceInUp')
+              .addClass('animated bounceOutDown');
+        setTimeout(function(){ $('#flash-messages').remove(); },1000)
+  },5000);
 });

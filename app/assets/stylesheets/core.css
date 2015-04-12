@@ -109,8 +109,8 @@ body{
 }
 .item-not .fa-tint{
 	position:relative;
-	bottom:-35px;
-	left:0px;
+	bottom:-30px;
+	left:-30px;
 	font-size:30px;
 	color:rgb(230,230,230);
 	border:10px solid #fff;
@@ -124,4 +124,10 @@ body{
 }
 .tab-pane{
 	padding-top:10px;
+}
+
+#flash-messages{
+	position:fixed;
+	bottom:40px;
+	right:40px;
 }
