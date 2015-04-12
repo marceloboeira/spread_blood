@@ -1,14 +1,12 @@
 
-development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+development: &default
+  adapter: postgresql
+  url: <%= ENV['SB_DATABASE_URL'] %>
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  <<: *default
   pool: 5
 
 production:
-  adapter: postgresql
-  url: <%= ENV['SB_DATABASE_URL'] %>
+  <<: *default
   pool: 30
