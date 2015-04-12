@@ -50,12 +50,12 @@ class User < ActiveRecord::Base
     drop_missing_amount * 100 / drop_base_calc
   end
 
-
-  private
-
   def drop_base_calc
     male? ? 600 : 500
   end
+
+
+  private
 
   def default_values
     self.gender ||= Gender::OTHER
