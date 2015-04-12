@@ -189,3 +189,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	padding-top:15px;
 	padding-bottom:15px;
 }
+.logo-github{
+	text-decoration:none;
+	font-size:30px;
+}

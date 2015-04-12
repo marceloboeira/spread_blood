@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to fa("tasks", text: "Ranking"), ranking_path %></li>
-          <li><%= link_to fa("waning", text: "FAQ"), faq_path %></li>
+          <li><%= link_to fa("question-circle", text: "FAQ"), faq_path %></li>
           <% if signed_in? %>
             <li class="dropdown">
               <%= link_to gravatar_for(current_user, class: "img-circle img-logo-dashboard", "data-placement": "right") + fa('caret-down'), "#", class: "dropdown-toggle", "data-toggle": "dropdown"  %>
@@ -55,7 +55,7 @@
   </div>
   <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
-      <%= image_tag "images/drop.png", class: "logo logo-footer" %>
+      <a href="http://github.com/SpreadBlood/core" target="_blank" class="logo-github"> <i class="fa fa-github-square "></i></a>
     </div>
   </nav>
 </body>
