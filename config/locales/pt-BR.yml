@@ -64,7 +64,7 @@
       unlock_instructions:
         subject: "Instruções para desbloqueio de conta"
 
-  çerrors:
+  errors:
     messages:
       not_found: "não encontrado"
       already_confirmed: "já foi confirmado"
