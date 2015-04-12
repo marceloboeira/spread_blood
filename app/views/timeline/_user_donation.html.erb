@@ -1,7 +1,8 @@
 <div class="row item-not">
   <div class="col-xs-12 col-sm-3">
     <%= link_to gravatar_for(donation.user, class: "img-circle col-xs-12") %>
-    <% if current_user == donation.user %>
+
+    <% if signed_in? && (current_user == donation.user) %>
       <%= link_to(fa("trash"), destroy_donation_path(donation)) %>
       <%= link_to(fa("twitter"), tweet_path(donation), target: "_blank") %>
     <% end %>
