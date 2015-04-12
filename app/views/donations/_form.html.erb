@@ -18,9 +18,14 @@
     <%= f.text_field :location, class: "form-control" %>
   </div>
 
-  <div class="col-xs-12">
-    <%= f.label "Quantidade" %>
-    <%= f.text_field :amount, class: "form-control" %>
+  <div class="col-xs-12 quantidade_doacao">
+    <div class="col-xs-10">
+      <%= f.label "Quantidade" %>
+      <%= f.range_field :amount,  min: '300', max: '500', step: '1', value:'350' %>
+    </div>
+    <div class="col-xs-2 quantity-view">
+      <h4></h4>
+    </div>
   </div>
 
   <div class="col-xs-12">
