@@ -1,1 +1,18 @@
-<%= @donation.amount %>
+<div class="row item-not">
+  <div class="col-xs-12 col-sm-3">
+    <%= link_to gravatar_for(@donation.user, class: "img-circle col-xs-12") %>
+    <%= link_to(fa("trash"), destroy_donation_path(@donation)) if current_user == @donation.user %>
+    <%= link_to(fa("twitter"), "https://twitter.com/intent/tweet?text=Eu doei #{@donation.amount} ml de sangue&hashtags=spreadblood", target: "_blank") if current_user == @donation.user %>
+  </div>
+  <div class="col-xs-12 col-sm-9">
+    <h4>
+      <small> <%= datetime_ago(@donation.donated_at) %></small><br />
+      <%= link_to @donation.user.at_username, @donation.user %>
+      doou <b><%= "#{@donation.amount} ml" %></b> em <span class="place"><%= @donation.location %></span>
+    </h4>
+    <p><%= @donation.comment.truncate(100) %></p>
+  </div>
+  <div class="col-xs-12" style="padding:0px;height:20px">
+  <%= fa "tint" %>
+  </div>
+</div>
