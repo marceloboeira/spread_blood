@@ -54,6 +54,14 @@ class User < ActiveRecord::Base
     male? ? 600 : 500
   end
 
+  def self.ranking limit
+    self.includes(:donations).map{ |u| u if u.donated_amount > 0 }
+    .compact
+    .sort_by {|a| a.donated_amount }
+    .reverse
+    .first(limit)
+  end
+
   private
 
   def default_values
@@ -66,11 +74,12 @@ class User < ActiveRecord::Base
     self.email = email.downcase if email.present?
   end
 
+  def devise_mailer
+    DeviseCustomMailer
+  end
+
   def self.find_for_database_authentication(conditions = {})
     find_by(username: conditions[:login]) || find_by(email: conditions[:login])
   end
 
-  def devise_mailer
-    DeviseCustomMailer
-  end
 end
