@@ -19,6 +19,6 @@ module ApplicationHelper
   end
 
   def tweet_path donation
-    "https://twitter.com/intent/tweet?text=Eu doei #{donation.amount} ml de sangue&hashtags=SpreadBlood"
+    "https://twitter.com/intent/tweet?text=Eu doei #{donation.amount} ml de sangue&hashtags=SpreadBlood,HackInPoA"
   end
 end
