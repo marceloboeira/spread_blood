@@ -12,6 +12,18 @@
     <br />
   </div>
 
+  <div class="field">
+    <%= f.label "Precisa de doação?" %><br />
+    <%= f.check_box :needs_donation %>
+    <br />
+  </div>
+
+  <div class="field">
+    <%= f.label "Sobre" %><br />
+    <%= f.text_area :about %>
+    <br />
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   validates :role, presence: true
   validates :birthday, allow_blank: true, date: { after: 100.years.ago, before: 01.years.ago }
 
+  scope :needs_donation, -> { where(needs_donation: true) }
+
   attr_accessor :login
 
   def age
@@ -33,12 +35,10 @@ class User < ActiveRecord::Base
   end
 
   def donated_amount
-    #TODO: SCOPE ?
     donations.sum :amount
   end
 
   def drop_amount
-    #TODO: BAD HORSIE HORSIE
     donated_amount / drop_base_calc
   end
 
