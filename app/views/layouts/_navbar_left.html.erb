@@ -1,5 +1,5 @@
 <div class="row image-sidebar">
-  <%= link_to gravatar_for(current_user, class: "img-rounded col-xs-12") %>
+  <%= link_to gravatar_for(current_user, class: "img-rounded col-xs-12"), current_user %>
   <br />
   <span class="badge label-blood"><%= current_user.blood_type_humanize %></span>
 </div>

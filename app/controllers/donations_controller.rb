@@ -1,12 +1,13 @@
 class DonationsController < ApplicationController
   before_filter :authenticate_user!, except: [:show]
+  before_filter :get_donation, except: [:new, :create]
 
   def new
     @donation = Donation.new
   end
 
   def show
-    @donation = Donation.find(params[:id])
+
   end
 
   def create
@@ -25,6 +26,10 @@ class DonationsController < ApplicationController
   end
 
   private
+
+  def get_donation
+    @donation = Donation.find(params[:id])
+  end
 
   def donation_params
     params.require(:donation).permit(:location, :donated_at, :amount, :comment)
