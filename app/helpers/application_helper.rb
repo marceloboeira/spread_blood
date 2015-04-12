@@ -17,4 +17,8 @@ module ApplicationHelper
   def devise_mapping
     @devise_mapping ||= Devise.mappings[:user]
   end
+
+  def tweet_path donation
+    "https://twitter.com/intent/tweet?text=Eu doei #{donation.amount} ml de sangue&hashtags=SpreadBlood"
+  end
 end
