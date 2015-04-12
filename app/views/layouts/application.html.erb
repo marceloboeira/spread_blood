@@ -50,14 +50,13 @@
       </div>
     </div>
   </nav>
-  <%= render'layouts/flash' %>
   <div class="container">
   <% if signed_in? %>
     <div class="hidden-xs col-sm-3 col-md-2">
       <%= render '/layouts/navbar_left' %>
     </div>
   <% end %>
-    <div class="col-xs-12 <%= "col-sm-7 col-md-10" if signed_in? %>">
+    <div class="col-xs-12 <%= "col-sm-9 col-md-10" if signed_in? %>">
       <%= yield %>
     </div>
   </div>
@@ -67,4 +66,5 @@
     </div>
   </nav>
 </body>
+  <%= render'layouts/flash' %>
 </html>
