@@ -2,7 +2,6 @@
 //= require bootstrap/bootstrap
 //= require moment/moment
 //= require moment/locale/pt-br
-//= require medium-editor
 //= require_self
 
 $(function() {
@@ -20,7 +19,6 @@ $(function() {
      */
     init: function() {
       this._momentInit();
-      this._mediumInit();
       this._tooltipInit();
     },
 
@@ -42,18 +40,6 @@ $(function() {
       $("date, time").each(function(i, e) {
         var d = moment.unix($(e).data("source"));
         $(e).html(d.fromNow());
-      });
-    },
-
-    /**
-     * Medium editor start
-     * @return {Function}
-     */
-    _mediumInit: function() {
-      var e = new MediumEditor('.html-editor', {
-        buttonLabels: 'fontawesome',
-        cleanPastedHTML: false,
-        forcePlainText: false
       });
     },
 
