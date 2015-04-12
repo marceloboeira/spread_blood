@@ -1,2 +1,4 @@
 libxml2-dev
 libxslt-dev
+libiconv
+zlib1g-dev
