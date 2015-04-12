@@ -49,31 +49,8 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form method="post" action="/">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel"><i class="fa fa-tint"></i> Informar doação</h4>
-        </div>
-        <div class="modal-body row">
-          <div class="col-xs-6">
-          <label for="Lugar">Lugar</label>
-          <input type="text" class="form-control" id="lugar" placeholder="Aonde você fez sua doação?">
-      </div>
-      <div class="col-xs-6">
-          <label for="quantidade">Quantidade</label>
-          <input type="number" class="form-control" id="quantidade" value="500" min="300" max="500">
-       </div>
-       <div class="col-xs-12">
-       <br />
-          <label for="quantidade">Comentário</label>
-          <textarea class="form-control" id="comentario" placeholder="Descreva sua experiência"></textarea>
-       </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <input type="submit" class="btn btn-danger" value="Concluir"></input>
-        </div>
-      </form>
+      <% @donation = Donation.new %>
+      <%= render 'donations/form' %>
     </div>
   </div>
 </div>
