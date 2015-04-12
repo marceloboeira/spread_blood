@@ -78,7 +78,9 @@ $(window).load(function() {
         setTimeout(function(){ $('#flash-messages').remove(); },1000)
   },5000);
 
-$( ".datepicker" ).datepicker();
+$( ".datepicker" ).datepicker({
+  dateFormat: "dd/mm/yy"
+});
 });
 
 $(document).on('change','[type="range"]', function(){

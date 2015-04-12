@@ -1,0 +1,27 @@
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th style="width:100px">Posição</th>
+			<th>Usuário</th>
+			<th>Quantidade</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @i = 0 %>
+		<% top_users.each do |user| %>
+		<tr>
+			<td> <center><span class="ranking-potision"><%= "#{@i += 1} º"%></span></center></td>
+			<td>
+			<div class="hidden-xs col-sm-2">
+			<%= link_to gravatar_for(user, class: "img-circle img-responsive"), user %>
+			</div>
+			<div class="col-xs-12 col-sm-8" style="font-size:30px;padding-top:5px">
+			<%= link_to user.at_username, user.at_username %>
+			</div>
+			</td>
+			<td style="font-size:30px"> <%= "#{user.donated_amount} ml "%></td>
+		</tr>
+
+		<% end %>
+	</tbody>
+</table>
