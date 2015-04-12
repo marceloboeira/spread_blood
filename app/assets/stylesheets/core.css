@@ -108,8 +108,8 @@ body{
 }
 .item-not .fa-tint{
 	position:relative;
-	bottom:-30px;
-	left:-30px;
+	bottom:0px;
+	left:0px;
 	font-size:30px;
 	color:rgb(230,230,230);
 	border:10px solid #fff;
@@ -174,4 +174,13 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 .quantity-view {
 	padding-top:10px;
+}
+.ranking-potision{
+	font-size:30px;
+	color: #b73c3c;
+	font-style: bold;
+}
+.jumbotron{
+	padding:10px;
+	padding-bottom:20px;
 }
