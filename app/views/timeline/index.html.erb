@@ -9,50 +9,40 @@
     <i class="fa fa-tint"></i> Informar Doação
     </button>
   </div>
-  <!-- Notifications -->
   <% @last_donations.each do |donation| %>
     <%= render '/timeline/user_donation', donation: donation  %>
   <% end %>
-  <!-- Notifications -->
 </div>
-  <div class="col-xs-12 col-md-5">
-    <div class="col-xs-12 alert alert-warning">
-      <h3><i class="fa fa-lightbulb-o"></i> Você sabia ?</h3>
-      <p><%= @tip.content.truncate(300) %> </p>
-    </div>
 
+<div class="col-xs-12 col-md-5">
+  <div class="col-xs-12 alert alert-warning">
+    <h3><i class="fa fa-lightbulb-o"></i> Você sabia ?</h3>
+    <p><%= @tip.content.truncate(300) %>. </p>
+  </div>
+  <% @users_that_need_donation.each do |user| %>
     <div class="col-xs-12 row-new-users">
-      <div class="media col-sm-12 col-md-12"><div class="media-left"><a href="#">
-            <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/bb77034c265ef86a4637e630f2e82afc?s=40">
-            <span class="badge label-new-user">A+</span></a></div><div class="media-body">
-            <h4 class="media-heading">Marvin Medeiros</h4>Acaba de se registrar</div>
-      </div>
-      <div class="media col-sm-12 col-md-12 "><div class="media-left"> <a href="#">
-            <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/fb84d2df934999fc747feb4d7c758e2c?s=40">
-            <span class="badge label-new-user">O-</span></a></div><div class="media-body">
-          <h4 class="media-heading">Marcelo Boeira</h4>Acaba de se registrar</div>
-      </div>
-      <div class="media col-sm-12 col-md-12 "><div class="media-left"> <a href="#">
-            <img class="media-object new-user img-circle" src="http://www.gravatar.com/avatar/fb84d2df934999fc747feb4d7c758e2c?s=40">
-            <span class="badge label-new-user">O-</span></a></div><div class="media-body">
-          <h4 class="media-heading">Marcelo Boeira</h4>Acaba de se registrar</div>
+      <div class="media col-sm-12 ">
+        <div class="media-left">
+          <%= link_to gravatar_for(user, class: "media-object new-user img-circle"), user %>
+            <span class="badge label-new-user"><%= user.blood_type_humanize %></span>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><%= user.at_username %></h4>
+          Preciso de sua doação.
+          <%= link_to "Ver mais", user, class: "btn btn-xs btn-default" %>
+        </div>
       </div>
     </div>
-  </div>
 
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <% @donation = Donation.new %>
-      <%= render 'donations/form' %>
+  <% end %>
+</div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <% @donation = Donation.new %>
+        <%= render 'donations/form' %>
+      </div>
     </div>
-  </div>
 </div>
 
 
