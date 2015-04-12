@@ -3,7 +3,7 @@
 
   <div class="form-group">
     <%= f.label "Seu email" %><br />
-    <%= f.email_field :email, autofocus: true, class: "form-control" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Digite seu e-mail" %>
   </div>
 
   <div class="form-group">
@@ -16,21 +16,22 @@
     <%= f.text_field :username, autofocus: true, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= f.label "Tipo sanguíneo" %><br />
-    <%= f.select :blood_type, collection: BloodType.to_a %>
-    <br />
+  <div class="form-group col-xs-12">
+    <div class="col-xs-3">
+      <%= f.label "Tipo sanguíneo" %><br />
+      <%= f.select :blood_type, collection: BloodType.to_a %>
+      <br />
+    </div>
+    <div class="col-xs-9">
+      <%= f.label "Precisa de doação?" %><br />
+      <%= f.check_box :needs_donation %>
+      <br />
+      </div>
   </div>
 
-  <div class="field">
-    <%= f.label "Precisa de doação?" %><br />
-    <%= f.check_box :needs_donation %>
-    <br />
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= f.label "Sobre" %><br />
-    <%= f.text_area :about %>
+    <%= f.text_area :about, class: "form-control", placeholder: "Digite algo sobre você " %>
     <br />
   </div>
 
@@ -40,23 +41,20 @@
 
   <div class="form-group">
     <%= f.label "Nova senha" %> <i>(Deixe em branco caso não deseje alterar)</i><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Digite sua nova senha" %>
   </div>
 
   <div class="form-group">
     <%= f.label "Confirme sua senha" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Confirme sua nova senha" %>
   </div>
 
   <div class="form-group">
     <%= f.label "Senha atual" %> <i>(Precisamos de sua senha atual para salvar suas modificações)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Digite sua senha atual" %>
   </div>
 
   <div class="actions">
     <%= f.submit "Atualizar", class: "btn btn-success" %>
   </div>
 <% end %>
-<h3>Deseja Cancelar sua conta? </h3>
-
-<p><%= button_to "Cancelar minha conta", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "btn btn-danger", method: :delete %></p>
