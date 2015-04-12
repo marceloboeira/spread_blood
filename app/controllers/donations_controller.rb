@@ -21,7 +21,7 @@ class DonationsController < ApplicationController
   end
 
   def destroy
-    if current_user == donation.user
+    if current_user == @donation.user
       @donation.destroy
       @message =  "Doação removida com sucesso!"
     else
