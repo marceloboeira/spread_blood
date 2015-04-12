@@ -5,6 +5,10 @@ class DonationsController < ApplicationController
     @donation = Donation.new
   end
 
+  def show
+    @donation = Donation.find(params[:id])
+  end
+
   def create
     @donation = Donation.new(donation_params)
     @donation.user = current_user
