@@ -8,7 +8,7 @@
   </div>
   <div class="col-xs-12 col-sm-9">
     <h4>
-      <small> <%= datetime_ago(donation.donated_at) %></small><br />
+      <small> <%= link_to(datetime_ago(donation.donated_at), "donations/#{donation.id}" ) %></small><br />
       <%= link_to donation.user.at_username, donation.user %>
       doou <b><%= "#{donation.amount} ml" %></b> em <span class="place"><%= donation.location %></span>
     </h4>
