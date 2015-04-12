@@ -35,12 +35,10 @@ end
 
 group :development, :test do
   gem "dotenv-rails"
-  gem "sqlite3"
 end
 
 group :production do
   gem "puma"
-  gem "sidekiq"
   gem "rails_12factor"
 end
 
