@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable,
-         :trackable, :validatable, :confirmable, authentication_keys: [:login]
+         :trackable, :validatable, authentication_keys: [:login]
   acts_as_birthday :birthday
   has_many :donations
   has_enumeration_for :gender, with: Gender, create_helpers: true
