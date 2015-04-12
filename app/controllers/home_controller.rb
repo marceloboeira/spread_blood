@@ -6,4 +6,8 @@ class HomeController < ActionController::Base
     end
     @top_users = User.ranking 5
   end
+
+  def faq
+
+  end
 end

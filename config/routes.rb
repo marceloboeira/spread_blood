@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/@:username', to: 'account#show', as: 'profile'
   get '/timeline', to: 'timeline#index'
   get '/ranking', to: 'ranking#index'
+  get '/FAQ', to: 'home#faq'
   resources :donations
   get '/donations/:id/destroy', to: 'donations#destroy', as: 'destroy_donation'
 end
