@@ -1,9 +1,12 @@
 //= require jquery/jquery
+//= require jquery-ui
 //= require bootstrap/bootstrap
 //= require moment/moment
 //= require moment/locale/pt-br
-//= require jquery-ui
 //= require_self
+
+$.widget.bridge('uitooltip', $.ui.tooltip);
+$.widget.bridge('uibutton', $.ui.button);
 
 $(function() {
 
