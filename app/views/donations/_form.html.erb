@@ -1,3 +1,9 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title" id="myModalLabel"><i class="fa fa-tint"></i> Informar doação</h4>
+</div>
+
+<div class="modal-body row">
 <%= form_for @donation do |f| %>
   <% if @donation.errors.any? %>
   <ul>
@@ -7,27 +13,28 @@
   </ul>
   <% end %>
 
-  <div class="field">
+  <div class="col-xs-12">
     <%= f.label "Lugar" %><br />
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="col-xs-12">
     <%= f.label "Quantidade" %>
-    <%= f.text_field :amount %>
+    <%= f.text_field :amount, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="col-xs-12">
     <%= f.label "Quando" %>
-    <%= f.date_field :donated_at %>
+    <%= f.date_field :donated_at, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="col-xs-12">
     <%= f.label "Comentário" %>
-    <%= f.text_area :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
   </div>
-
-  <div class="actions">
+</div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
     <%= f.submit "Cadastrar", class: "btn btn-danger" %>
   </div>
 <% end %>
