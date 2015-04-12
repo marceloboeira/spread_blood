@@ -184,3 +184,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 	padding:10px;
 	padding-bottom:20px;
 }
+
+.row-new-users .media{
+	padding-top:15px;
+	padding-bottom:15px;
+}
