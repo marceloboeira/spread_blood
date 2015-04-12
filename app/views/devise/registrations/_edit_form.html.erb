@@ -6,6 +6,16 @@
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= f.label "Seu Nome" %><br />
+    <%= f.text_field :name, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Seu Username" %><br />
+    <%= f.text_field :username, autofocus: true, class: "form-control" %>
+  </div>
+
   <div class="field">
     <%= f.label "Tipo sanguíneo" %><br />
     <%= f.select :blood_type, collection: BloodType.to_a %>
