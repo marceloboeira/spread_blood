@@ -1,11 +1,6 @@
 <div class="row item-not">
   <div class="col-xs-12 col-sm-3">
     <%= link_to gravatar_for(donation.user, class: "img-circle col-xs-12") %>
-
-    <% if signed_in? && (current_user == donation.user) %>
-      <%= link_to(fa("trash"), destroy_donation_path(donation)) %>
-      <%= link_to(fa("twitter"), tweet_path(donation), target: "_blank") %>
-    <% end %>
   </div>
   <div class="col-xs-12 col-sm-9">
     <h4>
@@ -15,7 +10,15 @@
     </h4>
     <p><%= donation.comment.truncate(100) %></p>
   </div>
+  <% if signed_in? && (current_user == donation.user) %>
+      <div class="btn-group pull-right">
+      <%= link_to(fa("trash"), destroy_donation_path(donation), title: "Deletar", class: "btn btn-danger btn-sm") %>
+      <%= link_to(fa("twitter"), tweet_path(donation), target: "_blank", title: "Twittar",  class: "btn btn-primary btn-sm") %>
+      </div>
+    <% end %>
+
   <div class="col-xs-12" style="padding:0px;height:20px">
   <%= fa "tint" %>
+
   </div>
 </div>
