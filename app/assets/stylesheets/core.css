@@ -2,6 +2,7 @@
  *= require bootstrap
  *= require animate.css
  *= require font-awesome
+ *= require jquery-ui
  *= require_self
  */
 

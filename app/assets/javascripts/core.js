@@ -2,6 +2,7 @@
 //= require bootstrap/bootstrap
 //= require moment/moment
 //= require moment/locale/pt-br
+//= require jquery-ui
 //= require_self
 
 $(function() {
@@ -74,7 +75,7 @@ $(window).load(function() {
         setTimeout(function(){ $('#flash-messages').remove(); },1000)
   },5000);
 
-
+$( ".datepicker" ).datepicker();
 });
 
 $(document).on('change','[type="range"]', function(){
