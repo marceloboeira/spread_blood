@@ -66,3 +66,15 @@ Donation.create(user: matheus, location: "Banco de Sangue do Hospital de Clínic
 Donation.create(user: andre, location: "Banco de Sangue do Hospital de Clínicas", amount: 500, comment: "Awesome", donated_at: 1.week.ago)
 
 
+Tip.create(content: "Quatro é o número de vidas que podem ser salvas com cada doação de sangue")
+Tip.create(content: "O sangue representa cerca de 7% do peso corporal de um indivíduo adulto")
+Tip.create(content: "Pessoa com boa saúde, entre 16 e 69 anos de idade (desde que a primeira doação tenha sido feita até 60 anos; e menores de idade com autorização e documentos especificos), com mais de 50 kg de peso, pode se candidatar para ser doadora de sangue")
+Tip.create(content: "A doação de sangue não engrossa nem afina o sangue")
+Tip.create(content: "Doando sangue você não ganha nem perde peso")
+Tip.create(content: "A doação de sangue não oferece ao doador nenhum risco de contrair doenças infecciosas. Portanto, você não corre risco de contrair AIDS ou Hepatite com a doação de sangue")
+Tip.create(content: "Cinco são as etapas para uma doação de sangue: cadastro (ou registro) do doador, triagem clínica (inclui teste de anemia, verificação da pressão arterial, batimentos cardíacos, peso, temperatura e questionário sobre sua saúde), voto de auto-exclusão, doação propriamente dita e lanche pós- doação")
+Tip.create(content: "Todo o processo de doação de sangue dura cerca de uma hora")
+Tip.create(content: "A cada dois segundos, algum paciente necessita de transfusão de sangue no Brasil")
+Tip.create(content: "Todas as células do sangue são produzidas na medula dos ossos, principalmente nos ossos chatos")
+Tip.create(content: "Mulheres representam menos de 40% dos doadores de sangue no Brasil")
+Tip.create(content: "Ainda não há nenhum substituto para o sangue humano")
