@@ -21,8 +21,14 @@ class DonationsController < ApplicationController
   end
 
   def destroy
-    @donation.destroy
-    redirect_to(timeline_path, notice: "Doação removida com sucesso!")
+    if current_user == donation.user
+      @donation.destroy
+      @message =  "Doação removida com sucesso!"
+    else
+      @message = "Você não pode remover esta doação!"
+    end
+
+    redirect_to(timeline_path, notice: @message)
   end
 
   private
