@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412011522) do
+ActiveRecord::Schema.define(version: 20150412023848) do
 
   create_table "donations", force: :cascade do |t|
     t.integer  "user_id"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150412011522) do
     t.integer  "failed_attempts",        default: 0,         null: false
     t.string   "unlock_token"
     t.datetime "locked_at"
+    t.boolean  "needs_donation"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
