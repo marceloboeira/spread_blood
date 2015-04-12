@@ -2,6 +2,13 @@
   <% flash.each do |key, value| %>
     <% key = (key == 'alert') ? 'danger' : key %>
     <% key = (key == 'notice') ? 'success' : key %>
-    <div class="animated bounceInUp alert alert-<%= key %>"><%= value %></div>
+    <div class="panel panel-<%= key %> animated bounceInUp">
+	  <div class="panel-heading">
+	    <h3 class="panel-title"><i class="fa fa-warning"></i> Notificação</h3>
+	  </div>
+	  <div class="panel-body">
+	    <%= value %>
+	  </div>
+	</div>
   <% end %>
 </flash>
