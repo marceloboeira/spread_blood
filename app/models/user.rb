@@ -27,7 +27,11 @@ class User < ActiveRecord::Base
   end
 
   def full_name
-    self.name || self.username.titleize
+    if self.name.empty?
+      return self.username.titleize
+    end
+
+    self.name
   end
 
   def at_username
