@@ -1,9 +1,6 @@
 development:
   adapter: postgresql
-  host: localhost
-  database: spreadblood_dev
-  user: spreadblood_dev
-  password: spreadblood_dev
+  url: <%= ENV['SB_DATABSE_URL'] %>
   pool: 30
 
 test:
@@ -13,5 +10,5 @@ test:
 
 production:
   adapter: postgresql
-  url: <%= ENV['SB_DATABASE_URL'] %>
+  url: <%= ENV['SB_DATABSE_URL'] %>
   pool: 30
